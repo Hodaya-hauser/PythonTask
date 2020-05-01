@@ -1,9 +1,7 @@
 from flask import Flask
 from resources.message import api_bp
-from flask_cors import CORS
 def create_app(config_filename):
     app = Flask(__name__)
-    CORS(app)
     app.config.from_object(config_filename)
     
     from app import api_bp
